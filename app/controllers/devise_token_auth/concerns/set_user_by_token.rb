@@ -5,7 +5,7 @@ module DeviseTokenAuth::Concerns::SetUserByToken
   include DeviseTokenAuth::Concerns::ResourceFinder
 
   included do
-    before_action :set_request_start
+    prepend_before_action :set_request_start
     after_action :update_auth_header
   end
 
